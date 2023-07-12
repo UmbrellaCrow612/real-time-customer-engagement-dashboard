@@ -7,6 +7,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "../ui/button";
+import { MailIcon } from "lucide-react";
+
+const ChannelOptions = [
+    {
+        Icon: "",
+        description: "",
+        performance: ""
+    }
+]
 
 export default function ChannelAnalytics() {
   return (
@@ -19,7 +28,7 @@ export default function ChannelAnalytics() {
           </CardDescription>
         </CardHeader>
         <CardContent className="flex-grow overflow-y-auto">
-          <p>lorem1000</p>
+          <ChannelCard />
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button variant="outline">Filter</Button>
@@ -29,3 +38,13 @@ export default function ChannelAnalytics() {
     </>
   );
 }
+
+const ChannelCard = () => {
+    return (
+      <>
+        <Button className="justify-between w-full" variant={"outline"}>
+          <MailIcon className="w-4 h-4 mr-2" /> Email <span className="text-destructive">34%</span>
+        </Button>
+      </>
+    );
+};
