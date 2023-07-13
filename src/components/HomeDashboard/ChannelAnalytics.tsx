@@ -16,7 +16,16 @@ import {
   InstagramIcon,
   LinkedinIcon,
   YoutubeIcon,
+  ActivityIcon,
 } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 
 const ChannelOptions = [
   {
@@ -66,7 +75,9 @@ export default function ChannelAnalytics() {
     <>
       <Card className="h-[20rem] xl:h-auto xl:row-span-2 xl:col-span-1 flex flex-col">
         <CardHeader>
-          <CardTitle>Channel Analytics</CardTitle>
+          <CardTitle className="flex items-center justify-between">
+            Channel Analytics <ActivityIcon className="w-4 h-4"/>
+          </CardTitle>
           <CardDescription>
             View the media response of your company
           </CardDescription>
@@ -82,7 +93,20 @@ export default function ChannelAnalytics() {
           ))}
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline">Filter</Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline">Filter</Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Ascending</DropdownMenuItem>
+              <DropdownMenuItem>Descending</DropdownMenuItem>
+              <DropdownMenuItem>New</DropdownMenuItem>
+              <DropdownMenuItem>Old</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Button>Detailed</Button>
         </CardFooter>
       </Card>
