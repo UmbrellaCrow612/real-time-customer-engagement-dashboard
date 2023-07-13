@@ -7,15 +7,59 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "../ui/button";
-import { MailIcon } from "lucide-react";
+import {
+  MailIcon,
+  PhoneIcon,
+  MessageCircleIcon,
+  FacebookIcon,
+  TwitterIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  YoutubeIcon,
+} from "lucide-react";
 
 const ChannelOptions = [
-    {
-        Icon: "",
-        description: "",
-        performance: ""
-    }
-]
+  {
+    Icon: MailIcon,
+    description: "Mail",
+    performance: "34",
+  },
+  {
+    Icon: PhoneIcon,
+    description: "Phone Call",
+    performance: "45",
+  },
+  {
+    Icon: MessageCircleIcon,
+    description: "Live Chat",
+    performance: "56",
+  },
+  {
+    Icon: FacebookIcon,
+    description: "Facebook",
+    performance: "66",
+  },
+  {
+    Icon: TwitterIcon,
+    description: "Twitter",
+    performance: "46",
+  },
+  {
+    Icon: InstagramIcon,
+    description: "Instagram",
+    performance: "36",
+  },
+  {
+    Icon: LinkedinIcon,
+    description: "Linkedin",
+    performance: "76",
+  },
+  {
+    Icon: YoutubeIcon,
+    description: "YouTube",
+    performance: "52",
+  },
+];
 
 export default function ChannelAnalytics() {
   return (
@@ -27,8 +71,15 @@ export default function ChannelAnalytics() {
             View the media response of your company
           </CardDescription>
         </CardHeader>
-        <CardContent className="flex-grow overflow-y-auto">
-          <ChannelCard />
+        <CardContent className="flex flex-col flex-grow gap-2 overflow-y-auto">
+          {ChannelOptions.map((op) => (
+            <ChannelCard
+              Icon={op.Icon}
+              description={op.description}
+              performance={op.performance}
+              key={op.performance}
+            />
+          ))}
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button variant="outline">Filter</Button>
@@ -39,12 +90,21 @@ export default function ChannelAnalytics() {
   );
 }
 
-const ChannelCard = () => {
-    return (
-      <>
-        <Button className="justify-between w-full" variant={"outline"}>
-          <MailIcon className="w-4 h-4 mr-2" /> Email <span className="text-destructive">34%</span>
-        </Button>
-      </>
-    );
+const ChannelCard = ({
+  Icon,
+  description,
+  performance,
+}: {
+  Icon: any;
+  description: string;
+  performance: string;
+}) => {
+  return (
+    <>
+      <Button className="justify-between w-full" variant={"outline"}>
+        <Icon className="w-4 h-4 mr-2" />
+        {description} <span>{performance}%</span>
+      </Button>
+    </>
+  );
 };
