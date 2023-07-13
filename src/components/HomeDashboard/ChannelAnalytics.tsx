@@ -100,7 +100,7 @@ export default function ChannelAnalytics() {
               <Button variant="outline">Filter</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuLabel>Results</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>Ascending</DropdownMenuItem>
               <DropdownMenuItem>Descending</DropdownMenuItem>
