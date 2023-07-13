@@ -4,19 +4,23 @@ import { Button } from "../ui/button";
 const options = [
   {
     href: "/",
-    label: "op 1",
+    label: "Analytics",
   },
   {
     href: "/",
-    label: "op 2",
+    label: "Alerts",
   },
   {
     href: "/",
-    label: "op 3",
+    label: "Feed",
   },
   {
     href: "/",
-    label: "op 4",
+    label: "Sentiments",
+  },
+  {
+    href: "/",
+    label: "Metrics",
   },
 ];
 export default function DesktopLinks() {
