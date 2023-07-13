@@ -76,7 +76,7 @@ export default function ChannelAnalytics() {
       <Card className="h-[20rem] xl:h-auto xl:row-span-2 xl:col-span-1 flex flex-col">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
-            Channel Analytics <ActivityIcon className="w-4 h-4"/>
+            Channel Analytics <ActivityIcon className="w-4 h-4" />
           </CardTitle>
           <CardDescription>
             View the media response of your company
@@ -127,7 +127,8 @@ const ChannelCard = ({
     <>
       <Button className="justify-between w-full" variant={"outline"}>
         <Icon className="w-4 h-4 mr-2" />
-        {description} <span>{performance}%</span>
+        {description}{" "}
+        <span className={Number(performance) < 40 ? "text-destructive" : "text-green-500"}>{performance}</span>
       </Button>
     </>
   );
