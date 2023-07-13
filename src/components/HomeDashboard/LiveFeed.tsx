@@ -28,6 +28,21 @@ export default function LiveFeed() {
             description="Twitter"
             content="Let's talk about Y Combinator funding and how it works"
           />
+          <FeedCard
+            title="@ShadCn"
+            description="Twitter"
+            content="Let's talk about Y Combinator funding and how it works"
+          />
+          <FeedCard
+            title="@ShadCn"
+            description="Twitter"
+            content="Let's talk about Y Combinator funding and how it works"
+          />
+          <FeedCard
+            title="@ShadCn"
+            description="Twitter"
+            content="Let's talk about Y Combinator funding and how it works"
+          />
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button variant={"outline"}>Filter</Button>
@@ -55,10 +70,6 @@ const FeedCard = ({
           <CardDescription>{description}</CardDescription>
         </CardHeader>
         <CardContent className="">{content}</CardContent>
-        <CardFooter className="justify-between">
-          <Button variant={"outline"}>View</Button>
-          <Button variant={"default"}>Respond</Button>
-        </CardFooter>
       </Card>
     </>
   );
