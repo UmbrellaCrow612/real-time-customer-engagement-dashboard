@@ -17,6 +17,8 @@ import {
   LinkedinIcon,
   YoutubeIcon,
   ActivityIcon,
+  ArrowUpIcon,
+  ArrowDownIcon,
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -128,7 +130,20 @@ const ChannelCard = ({
       <Button className="justify-between w-full" variant={"outline"}>
         <Icon className="w-4 h-4 mr-2" />
         {description}{" "}
-        <span className={Number(performance) < 40 ? "text-destructive" : "text-green-500"}>{performance}</span>
+        <span
+          className={
+            Number(performance) < 40
+              ? "text-destructive flex items-center gap-1"
+              : "text-green-500 flex items-center gap-1"
+          }
+        >
+          {Number(performance) < 40 ? (
+            <ArrowDownIcon className="w-4 h-4" />
+          ) : (
+            <ArrowUpIcon className="w-4 h-4" />
+          )}
+          {performance}
+        </span>
       </Button>
     </>
   );
