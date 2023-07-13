@@ -1,4 +1,4 @@
-import { Terminal } from "lucide-react";
+import { Terminal, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 import { Button } from "../ui/button";
 import {
@@ -15,7 +15,7 @@ export default function CustomAlerts() {
     <>
       <Card className="h-[20rem] xl:h-auto xl:row-span-2 xl:col-span-1 flex flex-col">
         <CardHeader>
-          <CardTitle>Custom Alerts</CardTitle>
+          <CardTitle className="flex items-center justify-between">Custom Alerts <AlertCircle className="w-4 h-4"/></CardTitle>
           <CardDescription>
             Set alerts to go off for certain events
           </CardDescription>
