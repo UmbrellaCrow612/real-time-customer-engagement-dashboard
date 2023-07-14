@@ -1,6 +1,13 @@
 import { MenuIcon } from "lucide-react";
 import { Button } from "../ui/button";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
 
 export default function MobileMenu() {
   return (
@@ -13,12 +20,19 @@ export default function MobileMenu() {
         </SheetTrigger>
         <SheetContent className="md:w-[400px] w-3/4" side={"left"}>
           <SheetHeader>
-            <SheetTitle>Are you sure absolutely sure?</SheetTitle>
+            <SheetTitle>Explore</SheetTitle>
             <SheetDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
+              Go to different parts of the website
             </SheetDescription>
           </SheetHeader>
+          <div className="flex flex-col gap-3 mt-4">
+            <Button variant={"default"} className="w-full">
+              Dashboard
+            </Button>
+            <Button variant={"outline"} className="w-full">
+              Account
+            </Button>
+          </div>
         </SheetContent>
       </Sheet>
     </>
