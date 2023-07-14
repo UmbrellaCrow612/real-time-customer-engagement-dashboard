@@ -7,7 +7,7 @@ export default function MobileMenu() {
     <>
       <Sheet>
         <SheetTrigger asChild>
-          <Button>
+          <Button variant={"outline"}>
             <MenuIcon />
           </Button>
         </SheetTrigger>
