@@ -1,5 +1,6 @@
-"use client"
+"use client";
 
+import { EyeIcon } from "lucide-react";
 import { Card, CardHeader, CardTitle } from "../ui/card";
 
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
@@ -31,14 +32,16 @@ const data = [
   },
 ];
 
-const percentageFormatter = (value:any) => `${value}%`;
+const percentageFormatter = (value: any) => `${value}%`;
 
 export default function SentimentGraph() {
   return (
     <>
       <Card className="h-[20rem] xl:h-auto xl:row-span-2 xl:col-span-1 flex flex-col">
         <CardHeader>
-          <CardTitle>Sentiment</CardTitle>
+          <CardTitle className="flex items-center justify-between">
+            Sentiment <EyeIcon className="w-4 h-4" />
+          </CardTitle>
         </CardHeader>
         <ResponsiveContainer width="100%" height={250}>
           <BarChart data={data}>
