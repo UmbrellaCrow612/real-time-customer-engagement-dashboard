@@ -1,7 +1,7 @@
 import ChannelAnalytics from "@/components/HomeDashboard/ChannelAnalytics";
 import CustomAlerts from "@/components/HomeDashboard/CustomAlerts";
 import LiveFeed from "@/components/HomeDashboard/LiveFeed";
-import SentimentCircle from "@/components/HomeDashboard/SentimentCircle";
+import SentimentGraph from "@/components/HomeDashboard/SentimentGraph";
 import { Card } from "@/components/ui/card";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <ChannelAnalytics />
       <CustomAlerts />
       <LiveFeed />
-      <SentimentCircle />
+      <SentimentGraph />
       <div className="h-[20rem] xl:h-auto xl:row-span-2 xl:col-span-1 flex flex-col">
         <Card className="w-full h-full">hello</Card>
       </div>
